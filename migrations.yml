@@ -1,0 +1,9 @@
+models:
+  User:
+    name: string
+    last_name: string
+    email: string unique
+    personal_id: string
+    teenager: boolean
+    address: string
+    state: string

@@ -40,11 +40,12 @@ class RegisterController extends Controller
 
             $data['password'] = Hash::make($data['password']);
             $data['teenager'] = $data['teenager'];
+            $data['role'] = 'user';
             $user = User::create($data);
 
             if ($user) {
                 auth()->login($user);
-                return redirect()->to('/home');
+                return redirect()->to('/');
             }
 
         } catch (\Throwable $e) {

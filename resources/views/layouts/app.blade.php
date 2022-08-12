@@ -11,7 +11,9 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
 
     <!-- Fontawesome Link -->
-    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+{{--    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">--}}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -21,6 +23,9 @@
         </div>
         <ul class="w-1/2 px-16 ml-auto flex justify-end pt-1">
             @if(auth()->check())
+                <a>
+                    <i class="fa-solid fa-bell"></i>
+                </a>
                 <li class="mx-6">
                     <p>Hola, {{ auth()->user()->first_name  }} </p>
                 </li>

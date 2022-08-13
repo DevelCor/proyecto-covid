@@ -29,6 +29,19 @@
                 <li class="mx-6">
                     <p>Hola, {{ auth()->user()->first_name  }} </p>
                 </li>
+                @if(auth()->user()->role == 'admin')
+                    <li class="mx-6">
+                        <a href="{{route('report.index')}}" class="font-semibold border-2 border-white py-2 px-4 rounded-md hover:bg-white hover:text-indigo-700">
+                            Reportes
+                        </a>
+                    </li>
+                    <li class="mx-6">
+                        <a href="/" class="font-semibold border-2 border-white py-2 px-4 rounded-md hover:bg-white hover:text-indigo-700">
+                            Buscar usuarios
+                        </a>
+                    </li>
+                @endif
+
                 <li class="mx-6">
                     <a href="{{ route('login.destroy')  }}" class="font-semibold border-2 border-white py-2 px-4 rounded-md hover:bg-white hover:text-indigo-700"> Cerrar Sesion </a>
                 </li>

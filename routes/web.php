@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IllnessController;
+use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\ReportsController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
@@ -20,6 +21,11 @@ use App\Http\Controllers\SessionsController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->middleware('auth')->name('home.index');
+
+
+Route::get('/notice', [NoticeController::class, 'index'])->middleware('auth')->name('notice.index');
+Route::post('/notice', [NoticeController::class, 'store'])->middleware('auth')->name('notice.store');
+
 Route::get('/reportes', [ReportsController::class, 'index'])->middleware('auth')->name('report.index');
 Route::post('/reportes', [ReportsController::class, 'getReports'])->middleware('auth')->name('get_report.index');
 

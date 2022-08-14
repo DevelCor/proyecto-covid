@@ -23,7 +23,9 @@ class DatabaseSeeder extends Seeder
             'personal_id' => 'admin',
             'teenager' => 0,
             'address' => 'admin',
-            'state' => 'admin',
+            'exact_address' => 'admin',
+            'municipality' => 'admin',
+            'cellphone' => 'admin',
             'password' => Hash::make('admin'),
             'role' => 'admin',
         ]);

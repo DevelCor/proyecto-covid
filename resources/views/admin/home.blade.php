@@ -33,7 +33,7 @@
                     @foreach($users as $user)
                         <p>Nombre: {{$user->first_name}} {{$user->last_name}}</p>
                         <p>Email: {{$user->email}}</p>
-                        <p>cedula: {{$user->persoanl_id}}</p>
+                        <p>cedula: {{$user->personal_id}}</p>
                         <p>adolecente: {{$user->persoanl_id === 1 ? 'si' : 'no'}}</p>
                         <p>Municipio: {{$user->municipality}}</p>
                         <p>Localidad: {{$user->address}}</p>

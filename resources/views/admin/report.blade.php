@@ -16,6 +16,7 @@
                             class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-900 p-2 my-2 focus:bg-white">
                         <option value="covid">covid</option>
                         <option value="viruela">Viruela del mono</option>
+                        <option value="covid_variant">Variante de Covid</option>
                     </select>
                     <button type="submit"
                             class="rounded-md bg-indigo-500 w-full text-lg text-white font-semibold p-2 my-3 hover:bg-indigo-600">

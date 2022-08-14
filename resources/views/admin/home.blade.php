@@ -32,6 +32,14 @@
                 @if(isset($users))
                     @foreach($users as $user)
                         <p>Nombre: {{$user->first_name}} {{$user->last_name}}</p>
+                        <p>Email: {{$user->email}}</p>
+                        <p>cedula: {{$user->persoanl_id}}</p>
+                        <p>adolecente: {{$user->persoanl_id === 1 ? 'si' : 'no'}}</p>
+                        <p>Municipio: {{$user->municipality}}</p>
+                        <p>Localidad: {{$user->address}}</p>
+                        <p>Direccion exacta: {{$user->exact_address}}</p>
+                            <br>
+                        <h5>Reportes del usuario: </h5>
                         @if(isset($illness))
                             @foreach($illness as $item)
                                 <div class="my-3 p-2 bg-blue-100 border-gray-200 rounded-lg ">
@@ -44,7 +52,7 @@
                                     <p>Tos: {{$item->cough === 1 ? 'si' : 'no'}}</p>
                                     <p>Dolores de cabeza: {{$item->headaches === 1 ? 'si' : 'no'}}</p>
                                     <p>Vomitos: {{$item->vomit === 1 ? 'si' : 'no'}}</p>
-                                    <p>Sintomas extras del paciente: {{$item->extra_symptoms == 0 ? 'no' : $item->extra_symptoms}}</p>
+                                    <p>Sintomas extras del paciente: {{$item->extra_symptoms}}</p>
                                 </div>
                             @endforeach
                         @endif

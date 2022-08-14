@@ -32,9 +32,12 @@
                     </div>
                 @endif
                 @if(isset($report['illness']))
-                    <p>Personas que padecen {{ $report['illness'] }} : {{ $report['persons'] }} de {{ $report['total'] }} </p>
+                    <p>Personas que padecen {{ $report['illness'] }} : {{ $report['persons'] }}
+                        de {{ $report['total'] }} </p>
+                    <p>Esto equivale al {{$report['stats']}} % de los usuarios registrados</p>
                 @elseif(isset($report['symp']))
                     <p>Personas {{ $report['symp'] }} : {{ $report['persons'] }} de {{ $report['total'] }}</p>
+                    <p>Esto equivale al {{$report['stats']}} % de los enfermos registrados</p>
                 @endif
             </div>
             <div class="block mx-auto my-12 p-8 bg-white w-1/3 border border-gray-200 rounded-lg shadow-lg form-container">

@@ -11,6 +11,7 @@
             <label for="email">Enfermedad</label>
             <select name="illness" id="" class="border border-gray-200 rounded-md w-full bg-gray-200 text-lg placeholder-gray-900 p-2 my-2 focus:bg-white">
                 <option value="covid">Covid</option>
+                <option value="covid_variant">Variante del covid</option>
                 <option value="viruela">Viruela del mono</option>
             </select>
 
@@ -80,7 +81,7 @@
         @endif
 
         @if(session()->has('success'))
-            <div class="alert alert-danger">
+            <div class="">
                 <p class="border border-green-500 rounded-mg bg-green-100 w-full text-green-900 p-2 my-2">
                     {{ session()->get('success') }}
                 </p>

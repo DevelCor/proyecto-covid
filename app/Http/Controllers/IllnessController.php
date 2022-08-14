@@ -20,7 +20,7 @@ class IllnessController extends Controller
             'muscleaches' => isset($data['muscleaches']) ? 1 : 0,
             'headaches' => isset($data['headaches']) ? 1 : 0,
             'vomit' => isset($data['vomit']) ? 1 : 0,
-            'extra_symptoms' => isset($data['extra_symptoms']) ? 1 : 0,
+            'extra_symptoms' => isset($data['extra_symptoms']) ? $data['extra_symptoms'] : 0,
             'user_id' => auth()->user()->id,
         ]);
 

@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index(Request $request) {
         if (auth()->user()->role == 'admin') {
-            $users = User::all();
+            $users = User::where('role','!=','admin')->get();
             return view('admin.home',['users_form' => $users]);
         }
         return view('user.home');

@@ -44,7 +44,7 @@
                                     <p>Tos: {{$item->cough === 1 ? 'si' : 'no'}}</p>
                                     <p>Dolores de cabeza: {{$item->headaches === 1 ? 'si' : 'no'}}</p>
                                     <p>Vomitos: {{$item->vomit === 1 ? 'si' : 'no'}}</p>
-                                    <p>Simtomas extras del paciente: {{$item->extra_symptoms === 1 ? 'si' : 'no'}}</p>
+                                    <p>Sintomas extras del paciente: {{$item->extra_symptoms == 0 ? 'no' : $item->extra_symptoms}}</p>
                                 </div>
                             @endforeach
                         @endif

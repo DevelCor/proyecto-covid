@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Illness;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ReportsController extends Controller
@@ -18,6 +19,8 @@ class ReportsController extends Controller
     public function getReports(Request $request)
     {
         $find_by = $request->all();
+        $users = User::where('role','!=','admin')->get();
+
         if (isset($find_by['illness'])) {
             $report = Illness::where('name', '=', $find_by['illness'])->get();
             $report['persons'] = count($report);
@@ -50,6 +53,7 @@ class ReportsController extends Controller
             }
         }
 
+        $report['stats'] = ((int)$report['persons'] * 100 / $report['total']);
         return view('admin.report',['report' => $report]);
     }
 }

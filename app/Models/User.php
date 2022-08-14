@@ -25,6 +25,9 @@ class User extends Authenticatable
         'teenager',
         'address',
         'state',
+        'municipality',
+        'exact_address',
+        'cellphone',
         'password',
         'role',
     ];

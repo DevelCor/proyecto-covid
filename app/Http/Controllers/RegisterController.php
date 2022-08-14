@@ -20,7 +20,8 @@ class RegisterController extends Controller
             'email' => 'required|string|unique:users,email',
             'personal_id' => 'required|string|unique:users,personal_id',
             'address' => 'required|string',
-            'state' => 'required|string',
+            'exact_address' => 'required|string',
+            'state' => 'municipality|string',
             'password' => 'required|string|confirmed',
             'password_confirmation' => 'required_with:password|same:password',
         ]);

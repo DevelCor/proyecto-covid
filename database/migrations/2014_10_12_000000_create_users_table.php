@@ -21,7 +21,9 @@ class CreateUsersTable extends Migration
             $table->string('personal_id')->unique();
             $table->boolean('teenager');
             $table->string('address');
-            $table->string('state');
+            $table->string('exact_address');
+            $table->string('municipality');
+            $table->string('cellphone');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('role');

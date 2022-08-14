@@ -18,15 +18,23 @@
             <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-900 p-2 my-2 focus:bg-white" placeholder="Apellidos" name="last_name">
             <label for="teenager">Eres menor de edad?<input type="checkbox" class="border border-gray-200 rounded-md bg-gray-200 ml-10 text-lg placeholder-gray-900 p-2 my-2 focus:bg-white" placeholder="teenager" name="teenager">
             </label>
+            <br>
 
             <label for="personal_id">Cedula</label>
             <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-900 p-2 my-2 focus:bg-white" placeholder="Cedula" name="personal_id">
 
-            <label for="address">Direccion</label>
-            <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-900 p-2 my-2 focus:bg-white" placeholder="Direccion" name="address">
 
-            <label for="state">Estado</label>
-            <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-900 p-2 my-2 focus:bg-white" placeholder="Estado" name="state">
+            <label for="state">Municio</label>
+            <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-900 p-2 my-2 focus:bg-white" placeholder="Municipio" name="municipality">
+
+            <label for="address">Localidad</label>
+            <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-900 p-2 my-2 focus:bg-white" placeholder="Localidad" name="address">
+
+            <label for="address">Direccion Exacta</label>
+            <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-900 p-2 my-2 focus:bg-white" placeholder="Direccion exacta" name="exact_address">
+
+            <label for="address">Numero de telefono</label>
+            <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-900 p-2 my-2 focus:bg-white" placeholder="numero" name="cellphone">
 
             <label for="password">Contraseña</label>
             <input type="password" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-900 p-2 my-2 focus:bg-white" placeholder="Contraseña" name="password">

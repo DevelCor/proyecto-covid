@@ -53,7 +53,10 @@ class ReportsController extends Controller
             }
         }
 
-        $report['stats'] = ((int)$report['persons'] * 100 / $report['total']);
+        $report['stats'] = 0;
+        if($report['total'] != 0 ) {
+            $report['stats'] = ((int)$report['persons'] * 100 / $report['total']);
+        }
         return view('admin.report',['report' => $report]);
     }
 }
